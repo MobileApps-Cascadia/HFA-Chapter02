@@ -29,9 +29,13 @@ public class FindBeerActivity extends Activity {
         String beerType = String.valueOf(color.getSelectedItem());
 
         //TODO: Get recommendations from the BeerExpert class
+        String brandLabel = "";
+        for(String brand : expert.getBrands(beerType)) {
 
+            brandLabel += brand;
+        }
 
         //TODO: Display the brands instead of the beerType using the BeerExpert class
-        brands.setText(beerType);
+        brands.setText(brandLabel);
     }
 }
