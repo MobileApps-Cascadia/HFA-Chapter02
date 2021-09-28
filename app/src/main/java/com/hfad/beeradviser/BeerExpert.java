@@ -3,16 +3,14 @@ package com.hfad.beeradviser;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by davidg on 28/04/2017.
- */
-
 public class BeerExpert {
 
-    List<String> brandList = new ArrayList<>();
+    //TODO: Complete the Model with private members, a constructor, and getter/setter methods
 
-    String getBrands(String color) {
-        //Build the brand recommendation List
+
+    String getRecommendation(String color) {
+        //Adds brand recommendation data to an ArrayList
+        List<String> brandList = new ArrayList<>();
         switch (color) {
             case "light":
                 brandList.add("Jail Pale Ale");
@@ -30,9 +28,9 @@ public class BeerExpert {
                 brandList.add("Guinness");
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + color);
+                brandList.add("No brands available");
         }
-        //Create a simple string from the List
+        //Create a simple string from the ArrayList
         String brands = "";
         for(String brand : brandList) brands += brand + " \n";
         return brands;

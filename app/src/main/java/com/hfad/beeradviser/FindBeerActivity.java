@@ -3,37 +3,34 @@ package com.hfad.beeradviser;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.List;
-
+/**
+ * Based on example from Head First Android Chapter 02
+ */
 public class FindBeerActivity extends Activity {
-    private BeerExpert expert = new BeerExpert();
+    private final BeerExpert expert = new BeerExpert();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_beer);
-
     }
 
-    //Call when the button gets clicked
+    //Called when the button gets clicked
     public void onClickFindBeer(View view) {
-        //Get a reference to the TextView
-        TextView brands = (TextView) findViewById(R.id.brands);
+        //Gets a reference to the TextView and Spinner
+        TextView brandsListView = findViewById(R.id.brands);
+        Spinner colorSpinnerView = findViewById(R.id.color);
 
-        //Get a reference to the Spinner
-        Spinner color = (Spinner) findViewById(R.id.color);
+        //Gets the selected item in the Spinner
+        String beerType = String.valueOf(colorSpinnerView.getSelectedItem());
 
-        //Get the selected item in the Spinner
-        String beerType = String.valueOf(color.getSelectedItem());
-
-        //TODO: Get recommendations from the BeerExpert class
+        //TODO: WRITE code to get recommendations from the BeerExpert class
 
 
-        //TODO: Display the brands instead of the beerType using the BeerExpert class
-        brands.setText(beerType);
+        //TODO: MODIFY code to display the brands instead of the beerType using the BeerExpert class
+        brandsListView.setText(beerType);
     }
 }
