@@ -8,7 +8,7 @@ public class BeerExpert {
     //TODO: Complete the Model with private members, a constructor, and getter/setter methods
 
 
-    String getRecommendation(String color) {
+    static String getRecommendation(String color) {
         //Adds brand recommendation data to an ArrayList
         List<String> brandList = new ArrayList<>();
         switch (color) {
