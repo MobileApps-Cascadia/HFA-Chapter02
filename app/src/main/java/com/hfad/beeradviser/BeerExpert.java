@@ -6,7 +6,21 @@ import java.util.List;
 public class BeerExpert {
 
     //TODO: Complete the Model with private members, a constructor, and getter/setter methods
+    private String mColor;
 
+    public BeerExpert() {
+
+    }
+    public BeerExpert(String color) {
+        setColor(mColor);
+
+    }
+    public String getColor() {
+        return mColor;
+    }
+    public void setColor(String color) {
+        mColor = color;
+    }
 
     String getRecommendation(String color) {
         //Adds brand recommendation data to an ArrayList
@@ -31,8 +45,9 @@ public class BeerExpert {
                 brandList.add("No brands available");
         }
         //Create a simple string from the ArrayList
-        String brands = "";
-        for(String brand : brandList) brands += brand + " \n";
-        return brands;
+            String brands = "";
+            for (String brand : brandList) brands += brand + " \n";
+            return brands;
+
     }
 }

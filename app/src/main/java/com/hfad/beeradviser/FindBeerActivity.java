@@ -28,9 +28,10 @@ public class FindBeerActivity extends Activity {
         String beerType = String.valueOf(colorSpinnerView.getSelectedItem());
 
         //TODO: WRITE code to get recommendations from the BeerExpert class
-
+        expert.setColor(beerType);
+        String recs = expert.getRecommendation(beerType);
 
         //TODO: MODIFY code to display the brands instead of the beerType using the BeerExpert class
-        brandsListView.setText(beerType);
+        brandsListView.setText(recs);
     }
 }
