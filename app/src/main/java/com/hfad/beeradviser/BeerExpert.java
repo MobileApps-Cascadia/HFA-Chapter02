@@ -6,9 +6,22 @@ import java.util.List;
 public class BeerExpert {
 
     //TODO: Complete the Model with private members, a constructor, and getter/setter methods
+    private String mColor;
 
+    public BeerExpert() {
+        setColor(mColor);
+    }
 
-    String getRecommendation(String color) {
+    public void setColor(String color) {
+        mColor = color;
+    }
+
+    public String getColor() {
+        return mColor;
+    }
+
+    String getRecommendation() {
+        String color = getColor();
         //Adds brand recommendation data to an ArrayList
         List<String> brandList = new ArrayList<>();
         switch (color) {
