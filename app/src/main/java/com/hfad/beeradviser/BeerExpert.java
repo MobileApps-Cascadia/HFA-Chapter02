@@ -7,9 +7,9 @@ public class BeerExpert {
 
     //TODO: Complete the Model with private members, a constructor, and getter/setter methods
     // constructor
-//    public BeerExpert() {
-//
-//    }
+    public BeerExpert() {  // what could be the parameters?
+
+    }
 
     String getRecommendation(String color) {
         //Adds brand recommendation data to an ArrayList
